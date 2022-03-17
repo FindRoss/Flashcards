@@ -1,25 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Flashcards from './Flashcards';
+import Nav from './Nav';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Nav />
+      <div className="app--content">
+        <Flashcards />
+      </div>
     </div>
   );
 }
 
 export default App;
+
+// article use in front of a noun. 
+// use 'keydown' event. fully supported across browsers. 
+// state would look like: 
+/* state = {
+  words: [
+    {
+      german: "German word",
+      english: "English version",
+      gender: "male", or "female", "neutral", or null
+      theme: ["Food", "Shopping"],
+      id: "",
+      date: ""
+    }
+  ],
+  favorites: [ id, id, id, ...words to repeat like favorites]
+}
+
+*/
