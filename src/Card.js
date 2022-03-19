@@ -1,12 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Card({ word, handlePanelClick }) {
   const [reveal, setReveal] = useState(false)
 
   const { german, english } = word;
 
+  const revealClass = reveal ? "" : "not-revealed";
+
   return (
-    <div className="card__wrapper">
+    <div className={`card__wrapper ${revealClass}`}>
 
       <div className="card__side side--left" onClick={() => handlePanelClick('left')}>
         <i class="fas fa-chevron-left"></i>

@@ -97,6 +97,11 @@ nav {
   grid-template-columns: 15% 1fr 15%;
 }
 
+.card__wrapper.not-revealed:hover {
+  background: var(--secondary-2);
+  /* opacity: 0.25; */
+}
+
 .card {
   min-height: 250px;
   color: var(--light-1);
